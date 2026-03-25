@@ -27,7 +27,11 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <img
           src="/jm-profile.webp"
           alt="Johan Melin"
-          class="w-40 h-40 rounded-full object-cover flex-shrink-0 mx-auto sm:mx-0 border-2 border-border"
+          width={320}
+          height={320}
+          loading="eager"
+          decoding="sync"
+          class="w-40 h-40 rounded-full object-cover flex-shrink-0 mx-auto sm:mx-0 border-2 border-border overflow-hidden text-transparent"
         />
         <div class="flex-1 text-center sm:text-left">
           <div class="flex items-center gap-2 justify-center sm:justify-start">

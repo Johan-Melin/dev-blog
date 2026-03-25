@@ -23,36 +23,46 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <Header />
   <main id="main-content" data-layout="index" class="app-layout">
     <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Developer musings
-      </h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="inline-block"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <IconRss
-          width={20}
-          height={20}
-          class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
+      <div class="flex flex-col sm:flex-row items-center gap-6">
+        <img
+          src="/jm-profile.jpg"
+          alt="Johan Melin"
+          class="w-40 h-40 rounded-full object-cover flex-shrink-0 mx-auto sm:mx-0 border-2 border-border"
         />
-        <span class="sr-only">RSS Feed</span>
-      </a>
-
-      <p>
-        Post-singularity dev diary — from vibe coding to agentic engineering.
-      </p>
-      {
-        // only display if at least one social link is enabled
-        SOCIALS.length > 0 && (
-          <div class="mt-4 flex max-sm:flex-col sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
-            <Socials />
+        <div class="flex-1 text-center sm:text-left">
+          <div class="flex items-center gap-2 justify-center sm:justify-start">
+            <h1 class="my-2 inline-block text-2xl font-bold sm:my-4 sm:text-3xl">
+              The Agentic Engineer
+            </h1>
+            <a
+              target="_blank"
+              href="/rss.xml"
+              class="inline-block"
+              aria-label="rss feed"
+              title="RSS Feed"
+            >
+              <IconRss
+                width={20}
+                height={20}
+                class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
+              />
+              <span class="sr-only">RSS Feed</span>
+            </a>
           </div>
-        )
-      }
+          <p class="italic">
+            Accept what AI does better. Own what only you can. Know which is which.
+          </p>
+          {
+            // only display if at least one social link is enabled
+            SOCIALS.length > 0 && (
+              <div class="mt-4 flex max-sm:flex-col sm:items-center">
+                <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
+                <Socials />
+              </div>
+            )
+          }
+        </div>
+      </div>
     </section>
 
     {

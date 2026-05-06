@@ -2,7 +2,10 @@
 layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
+AI is changing coding from execution to orchestration.
+---
+Autonomous coding agents are already capable of working for hours at a time, and that window keeps expanding.
 
-Trying to figure out what it means to be a developer in a world where AI writes all the code.
+While the industry focuses on generation speed, quality matters more than ever.
 
-Inspired by developers like [steipete](https://github.com/steipete) who ship relentlessly in public, I'm documenting the messy journey from vibe coder to agentic engineer, trusting the code and shipping faster 🚀. 
+I’m exploring how to leverage the strengths of AI while still understanding, shaping, and owning the systems we build.
